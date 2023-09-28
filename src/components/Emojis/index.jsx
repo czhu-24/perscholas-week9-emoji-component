@@ -3,10 +3,13 @@ import { primaryContext } from '../../context/PrimaryContext'
 
 const Emojis = () => {
 
-	const { currentMood, compliments } = useContext(primaryContext);
+	const { currentMood } = useContext(primaryContext);
 	return (
 		<>
-			<div>{currentMood === "happy" : }</div>
+			<div>{
+				currentMood === "happy" ? "😃"
+					: currentMood === "fine" ? "😐"
+						: "😞"}</div>
 		</>
 	)
 }
